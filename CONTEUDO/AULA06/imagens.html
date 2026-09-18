@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imagens Responsivas</title>
+    <style>
+        .imagem-responsiva{
+            height: auto;
+            max-width: 100%;
+            display: block;
+        }
+        .css-alternativo{
+            width: 100%;
+            height: auto;
+            max-width: 1200px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>imagens Responsivas</h1>
+    <p>selecione <button><a href="INDEX.HTML">voltar</a></p></button>
+    <h2>imagens Responsivas com HTML puro</h2>
+    <picture>
+       <source media="(max-width: 750px)" srcset="imagens/imagem_300.jpg" type="image/jpg">
+<source media="(max-width: 1050px)" srcset="imagens/imagem_600.jpg" type="image/jpg">
+<img src="imagens/imagem_1200.jpg" alt="Imagem responsiva de paisagem">
+</picture>
+
+<h2>imagens responsiva utilizando CSS</h2>
+<img 
+class="imagem-responsival"
+src="imagens/imagem_600.jpg" 
+srcset="imagens/imagem_300.jpg 300w,imagens/imagem_600.jpg 600w,imagens/imagem_1200.jpg 1200w"
+sizes="(max-width: 1200px) 100vw, 1200px"
+alt="Imagem responsiva utilizando CSS"
+width="1200"
+height="450"
+loading="lazy">
+
+<h2>imagem responsiva alternativa CSS</h2>
+<img src="imagens/imagem_1200.jpg" alt="beaufiulter">
+
+</body>
+</html>
